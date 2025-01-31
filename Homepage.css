@@ -1,0 +1,443 @@
+/* General styles */
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: 150px;
+  margin-right: 15px;
+  padding-left: 15px;
+  padding-right: 150px;
+  display: flex;
+  flex-direction: row; /* Layout items horizontally */
+  justify-content: flex-start; /* Align items to the left */
+  gap: 2rem; /* Space between items */
+  flex-wrap: wrap; /* Allow items to wrap if needed */
+}
+
+/* Padding and Spacing */
+.pb-14 {
+  padding-bottom: 5.5rem;
+}
+
+.pt-16 {
+  padding-top: 2.5rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+/* Service Container */
+.service-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0rem; /* Adjust the space between the items */
+  justify-content: center; /* Center the items horizontally */
+}
+
+/* Service Box Styling */
+.service-box {
+  background-color: #f4f4f4;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+  transition: all 0.3s ease;
+  min-width: 150px; /* Ensure they have a reasonable width */
+  flex-grow: 1; /* Allow them to grow */
+  max-width: 350px; /* Limit the width of each box */
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* Hover effect for Service Box */
+.service-box:hover {
+  background-color: #ffffff;
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon Container */
+.icon-container {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+}
+
+/* Title Styling */
+.service-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-align: center;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 640px) {
+  .service-container {
+    flex-direction: column; /* Stack the service boxes vertically on smaller screens */
+    align-items: center; /* Center them horizontally */
+  }
+
+  .service-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 1rem; /* Space between items */
+  }
+
+  .service-box {
+    width: 80%; /* Make the service boxes fill most of the width */
+    margin-bottom: 1rem; /* Add spacing between items */
+  }
+}
+
+@media (min-width: 768px) {
+  .service-container {
+    flex-direction: row; /* Stack the service boxes in rows for medium and larger screens */
+    gap: 1.5rem; /* Adjust the gap */
+    justify-content: center;
+  }
+
+  .service-box {
+    width: 30%; /* Make the service boxes take up 30% of the container width */
+  }
+}
+
+@media (min-width: 1024px) {
+  .service-box {
+    width: 22%; /* Take up less space for larger screens, adjust accordingly */
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Header */
+.header {
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 1px;
+  background-color: #f7fbff;
+  color: rgb(255, 255, 255);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.logo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #085e15;
+  margin-right: 700px;
+  flex-shrink: 0;
+  transform: translateX(20px); /* Adjust the value to move the logo to the right */
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav a {
+  margin: 0 15px;
+  color: rgb(32, 144, 112);
+  font-size: 1.1rem;
+  text-decoration: none; /* Remove default underline */
+  position: relative;
+}
+
+.nav a:hover {
+  text-decoration: none; /* Remove underline on hover */
+}
+
+.nav a:before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #e74500;
+  transition: width 0.3s ease;
+}
+
+.nav a:hover:before {
+  width: 100%;
+}
+
+.nav a.active:before {
+  width: 100%;
+}
+
+/* Hero Section */
+.hero-content {
+  max-width: 50%;
+}
+
+.hero-content h1 {
+  font-size: 3.2rem;
+  margin-bottom: 22px;
+}
+
+.hero-content p {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.hero-buttons .btn-primary {
+  padding: 12px 25px;
+  background-color: #e74c3c;
+  color: white;
+  margin-right: 15px;
+  border-radius: 8px;
+}
+
+.hero-buttons .btn-secondary {
+  padding: 12px 25px;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  border-radius: 8px;
+}
+
+.hero-image {
+  max-width: 35%;
+  border-radius: 15px;
+  box-shadow: 0 0px 00px rgba(0, 0, 0, 0.2);
+  transform: translateX(-50px) translateY(40px); /* Moves the image to the left and down */
+
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 50px;
+  background-color: #64e1f1;
+  color: rgb(0, 0, 0);
+}
+
+.hero h1 {
+  font-family: 'Roboto', sans-serif; /* Apply specific font for the heading */
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+.hero p {
+  font-family: 'Poppins', sans-serif; /* Apply specific font for paragraph */
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+.hero-buttons {
+  margin-top: 20px;
+}
+
+.hero-buttons .MuiButton-root {
+  font-family: 'Poppins', sans-serif; /* Apply font for buttons */
+}
+
+
+.key-features-section {
+  text-align: center;
+  padding: 70px 200px;
+  background-color: #f4f4f9;
+}
+
+.features-container {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  width: 250px;
+  height: 250px;
+  perspective: 1000px; /* Adds depth for the flip effect */
+  position: relative;
+}
+
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column; /* Ensures heading stays on top of paragraph */
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 0.5s ease;
+  padding: 15px; /* Adds spacing inside the card */
+  box-sizing: border-box; /* Includes padding in dimensions */
+}
+
+.card-front {
+  background: linear-gradient(to right, #a4d8d5, #61DBFB); /* Flip color scheme */
+}
+
+.card-back {
+  background: linear-gradient(to right, #c4f1dd, #6fe4aa); /* Colorful gradient for front */
+  transform: rotateY(180deg); /* Initially hides back side */
+}
+
+.feature-card:hover .card-front {
+  transform: rotateY(180deg); /* Flip front to back on hover */
+}
+
+.feature-card:hover .card-back {
+  transform: rotateY(0deg); /* Show back on hover */
+}
+
+.card-content h3 {
+  margin-bottom: 10px; /* Adds spacing below heading */
+  font-size: 1.5em;
+}
+
+.card-content p {
+  font-size: 1em;
+  line-height: 1.4; /* Improves readability of paragraph */
+}
+
+
+/* Contact Section */
+.contact {
+  padding: 50px 20px;
+  background-color: #ecf0f1;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+/* About Us Section */
+.about {
+  padding: 80px 20px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+  font-weight: bold;
+}
+
+.about-subtext {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  color: #666;
+}
+.about-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.about-card {
+  background: #f9f9f9;
+  padding: 20px;
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.about-card:hover {
+  transform: scale(1.05);
+  background: #ecf0f1;
+}
+
+.about-card h3 {
+  font-size: 1.7rem;
+  color: #2980b9;
+  margin-bottom: 10px;
+}
+
+.about-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-card {
+    width: 90%;
+  }
+}
+
+
+/* Footer */
+.footer {
+  padding: 40px;
+  background-color: #7ddbe2;
+  color: rgb(63, 35, 35);
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-nav a {
+  margin: 0 15px;
+  font-size: 1rem;
+  color: #e74c3c;
+}

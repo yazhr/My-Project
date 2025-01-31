@@ -1,0 +1,82 @@
+/* Container for the whole login screen */
+.login-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Image Section (Right) */
+.image-section {
+  flex: 1;
+  background: url("C:\Users\HP\OneDrive\Desktop\AdHub\frontend\src\Components\images\login.jpg") no-repeat center center;
+  transform: translateX(-20px) translateY(1px); /* Moves the image to the left and down */
+  background-size: cover;
+}
+
+/* Form Section (Left) */
+.form-section {
+  flex: 1;
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Heading for login/sign-up */
+.form-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Form Styles */
+.login-form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input Fields */
+.login-form input {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Options Section */
+.options {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Links for forgot password and toggle */
+.forgot-password, .cursor-pointer {
+  font-size: 0.9rem;
+  color: #007bff;
+  cursor: pointer;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+/* Submit Button */
+.login-button {
+  padding: 12px 0;
+  font-size: 1.1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
